@@ -1,6 +1,5 @@
 {
   "name": "comic-zone",
-  "private": true,
   "dependencies": {
     "babel-core": "^6.8.0",
     "babel-loader": "^6.2.4",
