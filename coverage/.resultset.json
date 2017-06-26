@@ -1,0 +1,63 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/meaghanconroy/comic-zone/app/models/user.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/meaghanconroy/comic-zone/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/meaghanconroy/comic-zone/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/meaghanconroy/comic-zone/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/meaghanconroy/comic-zone/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/meaghanconroy/comic-zone/app/controllers/application_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/meaghanconroy/comic-zone/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/meaghanconroy/comic-zone/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1498492430
+  }
+}
