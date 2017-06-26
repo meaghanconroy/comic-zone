@@ -15,10 +15,10 @@ RSpec.describe User, type: :model do
 
   it 'has a matching password confirmation for the password' do
     user = FactoryGirl.create(:user)
-  user_2 = FactoryGirl.build(:user, email: user.email)
-  user_3 = FactoryGirl.build(:user, username: user.username, email: "differentemail@gma.com")
+    user_2 = FactoryGirl.build(:user, email: user.email)
+    user_3 = FactoryGirl.build(:user, username: user.username, email: "differentemail@gma.com")
 
-  expect { user_2.save! }.to raise_error(ActiveRecord::RecordInvalid)
-  expect { user_3.save! }.to raise_error(ActiveRecord::RecordNotUnique)
-end
+    expect { user_2.save! }.to raise_error(ActiveRecord::RecordInvalid)
+    expect { user_3.save! }.to raise_error(ActiveRecord::RecordNotUnique)
+  end
 end
