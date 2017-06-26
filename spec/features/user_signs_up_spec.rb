@@ -5,7 +5,6 @@ feature "User signs up" do
     visit root_path
 
     click_link 'Sign Up'
-
     fill_in 'Username', with: "myamazingusername"
     fill_in 'First Name', with: "Hermione"
     fill_in 'Last Name', with: "Granger"

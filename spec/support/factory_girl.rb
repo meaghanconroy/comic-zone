@@ -2,7 +2,7 @@ require 'factory_girl'
 
 FactoryGirl.define do
   factory :user do
-    sequence(:username) {|n| "myuser#{n}name"}
+    username 'captmarvel'
     sequence(:email) {|n| "user#{n}@example.com" }
     first_name 'Carol'
     last_name 'Danvers'
