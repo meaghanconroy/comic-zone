@@ -2,6 +2,8 @@ require 'uri'
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  has_many :subscriptions
+  has_many :comics, through: :subscriptions
 
   validates :username, presence: true
   validates :first_name, presence: true

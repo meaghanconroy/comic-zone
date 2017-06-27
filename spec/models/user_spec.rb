@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  it { should have_many :subscriptions }
   it { should have_valid(:username).when('userfriend234', 'sillyname382') }
   it { should_not have_valid(:username).when(nil,'') }
 

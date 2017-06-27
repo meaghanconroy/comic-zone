@@ -6,6 +6,8 @@
         1,
         1,
         null,
+        1,
+        1,
         null,
         1,
         1,
@@ -27,6 +29,14 @@
         null
       ],
       "/Users/meaghanconroy/comic-zone/app/models/comic.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/meaghanconroy/comic-zone/app/models/subscription.rb": [
         1,
         1,
         1,
@@ -86,6 +96,6 @@
         0
       ]
     },
-    "timestamp": 1498578687
+    "timestamp": 1498595656
   }
 }
