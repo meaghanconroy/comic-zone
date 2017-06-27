@@ -9,14 +9,14 @@ FactoryGirl.define do
     password 'password'
     password_confirmation 'password'
   end
-#
-#   factory :venue do
-#     sequence(:name) { |n| "venue#{n}" }
-#     location '123 5th Street'
-#     website 'http://www.utphilly.com/'
-#     photo 'uniontransfer.jpg'
-#   end
-#
+
+  factory :comic do
+    publisher 'Marvel'
+    title 'Unbeatable Squirrel Girl'
+    creators ['Ryan North, writer']
+    characters ['Squirrel Girl']
+  end
+
 #   factory :admin_user do
 #     first_name 'admin'
 #     last_name 'meg'

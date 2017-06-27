@@ -1,0 +1,26 @@
+<%= @comic.title %>
+<%= @comic.publisher %>
+<% if @comic.creators %>
+  <li>
+    <ul>
+      Creators:
+      <% @comic.creators.each do |creator| %>
+      <li>
+        <%= creator %>
+      </li>
+      <% end %>
+    </ul>
+  </li>
+<% end %>
+<% if @comic.characters %>
+  <li>
+    <ul>
+      Characters:
+      <% @comic.characters.each do |character| %>
+      <li>
+        <%= character %>
+      </li>
+      <% end %>
+    </ul>
+  </li>
+<% end %>
