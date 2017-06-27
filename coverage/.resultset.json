@@ -26,6 +26,12 @@
         1,
         null
       ],
+      "/Users/meaghanconroy/comic-zone/app/models/comic.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/meaghanconroy/comic-zone/app/controllers/pages_controller.rb": [
         1,
         1,
@@ -41,8 +47,19 @@
         1,
         null,
         1,
-        30,
-        30,
+        34,
+        34,
+        null,
+        null
+      ],
+      "/Users/meaghanconroy/comic-zone/app/controllers/comics_controller.rb": [
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
         null,
         null
       ],
@@ -69,6 +86,6 @@
         0
       ]
     },
-    "timestamp": 1498507210
+    "timestamp": 1498578687
   }
 }
