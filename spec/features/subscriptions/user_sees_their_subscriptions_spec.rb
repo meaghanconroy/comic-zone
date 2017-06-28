@@ -29,8 +29,18 @@ feature "User views list of all comics" do
     click_link "Your Subscriptions"
     visit user_subscriptions_path(user)
     expect(page).to have_content "3 CURRENT SUBSCRIPTIONS:"
-    expect(page).to have_content(first_user_subscription.comic.title)
-    expect(page).to have_content(second_user_subscription.comic.title)
-    expect(page).to have_content(third_user_subscription.comic.title)
+    expect(page).to have_link(first_user_subscription.comic.title)
+    expect(page).to have_link(second_user_subscription.comic.title)
+    expect(page).to have_link(third_user_subscription.comic.title)
+  end
+  scenario 'a user can click on one of their subscriptions and see more info about the comic' do
+    visit root_path
+    sign_in_as(user)
+    visit user_subscriptions_path(user)
+    click_link first_user_subscription.comic.title
+    expect(page).to have_content(first_comic.publisher)
+    expect(page).to have_content(first_comic.title)
+    expect(page).to have_content(first_comic.creators.first)
+    expect(page).to have_content(first_comic.characters.first)
   end
 end
