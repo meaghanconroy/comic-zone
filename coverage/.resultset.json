@@ -73,21 +73,12 @@
         null,
         null
       ],
-      "/Users/meaghanconroy/comic-zone/app/channels/application_cable/channel.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/meaghanconroy/comic-zone/app/channels/application_cable/connection.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/meaghanconroy/comic-zone/app/jobs/application_job.rb": [
-        0,
-        0
+      "/Users/meaghanconroy/comic-zone/app/controllers/users_controller.rb": [
+        1,
+        1,
+        2,
+        null,
+        null
       ],
       "/Users/meaghanconroy/comic-zone/app/mailers/application_mailer.rb": [
         0,
@@ -96,6 +87,10 @@
         0
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1498661526
+=======
+    "timestamp": 1498662781
+>>>>>>> master
   }
 }

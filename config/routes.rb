@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :subscriptions
     resources :comics
   end
+  
   resources :comics
   resources :subscriptions
 end
