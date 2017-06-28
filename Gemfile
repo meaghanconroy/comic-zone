@@ -22,6 +22,7 @@ group :development, :test do
   gem 'launchy'
   gem 'factory_girl'
   gem 'valid_attribute'
+  gem 'shoulda'
   gem 'shoulda-matchers', require: false
 end
 

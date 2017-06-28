@@ -26,12 +26,10 @@ FactoryGirl.define do
 #     admin true
 #   end
 #
-#   factory :review do
-#     rating 5
-#     description "This venue is...."
-#     user
-#     venue
-#   end
+  factory :subscription do
+    user
+    comic
+  end
 #
 #   factory :vote do
 #     user
