@@ -1,0 +1,4 @@
+<%= "#{@subscriptions.length} CURRENT SUBSCRIPTIONS:" %></ br>
+<% @subscriptions.each do |subscription| %>
+<p><%= subscription.comic.title %> </p> </ br>
+<% end %>

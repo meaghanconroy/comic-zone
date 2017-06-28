@@ -2,3 +2,4 @@
   <%= @user.username %>'s Homepage
 </h2>
 <h4>Welcome, <%= @user.first_name %></h4>
+<%= link_to "Your Subscriptions", user_subscriptions_path(@user) %>
