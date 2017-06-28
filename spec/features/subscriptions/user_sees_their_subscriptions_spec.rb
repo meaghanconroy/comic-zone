@@ -4,6 +4,9 @@ feature "User views list of all comics" do
   let!(:user) do
     FactoryGirl.create(:user)
   end
+  let!(:user2) do
+    FactoryGirl.create(:user, username: "blahblahblah", email: "blahblah@blah.blah")
+  end
   let!(:first_comic) do
     FactoryGirl.create(:comic)
   end
@@ -22,6 +25,9 @@ feature "User views list of all comics" do
   let!(:third_user_subscription) do
     FactoryGirl.create(:subscription, user: user, comic: third_comic)
   end
+  let!(:other_user_subscription) do
+    FactoryGirl.create(:subscription, user: user2, comic: third_comic)
+  end
   scenario 'a user can view a list of their comic subscriptions' do
     visit root_path
     sign_in_as(user)
@@ -32,6 +38,14 @@ feature "User views list of all comics" do
     expect(page).to have_link(first_user_subscription.comic.title)
     expect(page).to have_link(second_user_subscription.comic.title)
     expect(page).to have_link(third_user_subscription.comic.title)
+  end
+  scenario "a user does not view a list of another user's comic subscriptions" do
+    visit root_path
+    sign_in_as(user2)
+    visit user_path(user2)
+    click_link "Your Subscriptions"
+    expect(page).to have_link(other_user_subscription.comic.title)
+    expect(page).to_not have_link(second_user_subscription.comic.title)
   end
   scenario 'a user can click on one of their subscriptions and see more info about the comic' do
     visit root_path
