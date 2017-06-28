@@ -24,6 +24,9 @@
     </ul>
   </li>
 <% end %>
-<% if current_user && !current_user.subscriptions.include?(@comic)%>
+<% if !@user.comics.include?(@comic)%>
   <%= link_to "Add Subscription", comic_subscriptions_path(@comic), method: :post %>
+<% end %>
+<% if @user.comics.include?(@comic) %>
+  <%= link_to "End Subscription", comic_subscription_path(@comic, @subscription), method: :delete %>
 <% end %>

@@ -12,5 +12,7 @@ class ComicsController < ApplicationController
 
   def show
     @comic = Comic.find(params[:id])
+    @user = current_user
+    @subscription = Subscription.find_by(user: @user, comic: @comic)
   end
 end
