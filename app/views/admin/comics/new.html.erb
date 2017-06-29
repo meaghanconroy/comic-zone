@@ -1,0 +1,24 @@
+<h1> Add Comic </h1>
+
+<%= form_for @comic do |f| %>
+  <%= f.label :publisher, "Publisher: " %>
+  <%= f.text_field :publisher %>
+  </br>
+  <%= f.label :title, "Title: " %>
+  <%= f.text_field :title %>
+  </br>
+  <%= f.label :creators, "Creators: " %>
+  <%= f.text_area :creators %>
+  </br>
+  <p class="tips"> (Separate creators with ";", ex: "Jill Pencil, writer;Jay Painter, colorist") </p>
+  </br>
+  <%= f.label :characters, "Characters: " %>
+  <%= f.text_area :characters %>
+  </br>
+  <p class="tips"> (Separate characters with ";", ex: "Captain Marvel;Hellcat/Ms. Marvel") </p>
+  </br>
+  <%= f.label :photo %>
+  <%= f.text_area :photo %>
+  </br>
+  <%= f.submit "Add Comic" %>
+<% end %>

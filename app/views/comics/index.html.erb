@@ -1,36 +1,49 @@
 <%= @title %>
+<% if current_user.try(:admin?) %>
+  <p>
+    <%= link_to "Add Comic", new_admin_comic_path %> 
+  </p>
+<% end %>
 
 <% @comics.each do |comic| %>
-  <ul>
-    <li>Published by:
-      <%= comic.publisher %>
-    </li>
-    <li>
+  <div id= <%= comic.id %> >
+    <h5>
       <%= link_to "#{comic.title}", comic_path(comic) %>
-    </li>
-    <% if comic.creators %>
-      <li>
-        <ul>
-          Creators:
-          <% comic.creators.each do |creator| %>
-          <li>
-            <%= creator %>
-          </li>
-          <% end %>
-        </ul>
+    </h5>
+    <ul>
+      <li>Published by:
+        <%= comic.publisher %>
       </li>
+      <% if comic.creators %>
+        <li>
+          <ul>
+            Creators:
+            <% comic.creators.each do |creator| %>
+            <li>
+              <%= creator %>
+            </li>
+            <% end %>
+          </ul>
+        </li>
+      <% end %>
+      <% if comic.characters %>
+        <li>
+          <ul>
+            Characters:
+            <% comic.characters.each do |character| %>
+            <li>
+              <%= character %>
+            </li>
+            <% end %>
+          </ul>
+        </li>
+      <% end %>
+    </ul>
+    <% if current_user.try(:admin?) %>
+      <p>
+        <%= link_to "Delete Comic", admin_comic_path(comic), method: :delete %> |
+        <%= link_to "Update Comic Info", admin_users_path %>
+      </p>
     <% end %>
-    <% if comic.characters %>
-      <li>
-        <ul>
-          Characters:
-          <% comic.characters.each do |character| %>
-          <li>
-            <%= character %>
-          </li>
-          <% end %>
-        </ul>
-      </li>
-    <% end %>
-  </ul>
+  </div>
 <% end %>
