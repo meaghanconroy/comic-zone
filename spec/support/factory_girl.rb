@@ -17,15 +17,16 @@ FactoryGirl.define do
     characters ['Squirrel Girl']
   end
 
-#   factory :admin_user do
-#     first_name 'admin'
-#     last_name 'meg'
-#     email 'friday@launch.com'
-#     password 'password'
-#     password_confirmation 'password'
-#     admin true
-#   end
-#
+  # factory :admin_user do
+  #   username 'shehulk'
+  #   first_name 'Jennifer'
+  #   last_name 'Walters'
+  #   email 'jwalters@lawfirm.com'
+  #   password 'password'
+  #   password_confirmation 'password'
+  #   admin true
+  # end
+
   factory :subscription do
     user
     comic
