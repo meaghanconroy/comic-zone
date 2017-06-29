@@ -1,4 +1,7 @@
 class Admin::ComicsController < ApplicationController
+  def new
+    @comic = Comic.new
+  end
   def destroy
     if current_user.admin?
       @comic = Comic.find(params[:id])

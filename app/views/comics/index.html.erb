@@ -1,4 +1,9 @@
 <%= @title %>
+<% if current_user.try(:admin?) %>
+  <p>
+    <%= link_to "Add Comic", new_admin_comic_path %> 
+  </p>
+<% end %>
 
 <% @comics.each do |comic| %>
   <div id= <%= comic.id %> >
