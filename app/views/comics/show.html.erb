@@ -1,0 +1,32 @@
+<%= @comic.title %>
+<%= @comic.publisher %>
+<% if @comic.creators %>
+  <li>
+    <ul>
+      Creators:
+      <% @comic.creators.each do |creator| %>
+      <li>
+        <%= creator %>
+      </li>
+      <% end %>
+    </ul>
+  </li>
+<% end %>
+<% if @comic.characters %>
+  <li>
+    <ul>
+      Characters:
+      <% @comic.characters.each do |character| %>
+      <li>
+        <%= character %>
+      </li>
+      <% end %>
+    </ul>
+  </li>
+<% end %>
+<% if !@user.comics.include?(@comic)%>
+  <%= link_to "Add Subscription", comic_subscriptions_path(@comic), method: :post %>
+<% end %>
+<% if @user.comics.include?(@comic) %>
+  <%= link_to "End Subscription", comic_subscription_path(@comic, @subscription), method: :delete %>
+<% end %>

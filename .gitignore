@@ -17,4 +17,13 @@
 /yarn-error.log
 
 .byebug_history
+<<<<<<< HEAD
 .env
+=======
+/coverage
+.env
+
+/node_modules
+/app/assets/javascripts/bundle.js
+/react/coverage
+>>>>>>> master

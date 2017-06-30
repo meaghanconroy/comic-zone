@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  root 'pages#home'
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users do
+    resources :comics, only: [:index, :show]
+  end
+
+  resources :comics, only:[:index, :show, :create] do
+    resources :subscriptions
+  end
+  namespace :admin do
+    resources :users
+    resources :comics
+  end
 end
