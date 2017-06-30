@@ -28,3 +28,4 @@ data.each do |comic|
     photo: comic["thumbnail"]["path"] + "." + comic["thumbnail"]["extension"]
   )
 end
+Comic.create!(publisher: "Image", title: "Saga", creators: ["Brian K Vaughn, writer", "Fiona Staples, illustrator"], characters: ["Marko", "Alana", "Hazel"], ongoing: true)
