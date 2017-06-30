@@ -7,25 +7,24 @@ Comic.destroy_all
 public_key = ENV['MARVEL_API_PUBLIC_KEY']
 private_key = ENV['MARVEL_API_PRIVATE_KEY']
 ts = Time.new
+timestamp = ts.to_s
+hash = Digest::MD5.hexdigest("#{timestamp}"+"#{private_key}"+"#{public_key}")
 
-hash = Digest::MD5.hexdigest(ts.to_s+private_key+public_key)
-
-response = RestClient.get "http://gateway.marvel.com/v1//public/comics?ts=#{ts}&apikey=#{public_key}&hash=#{hash}"
+response = RestClient.get "http://gateway.marvel.com/v1//public/series?ts=#{timestamp}&apikey=#{public_key}&hash=#{hash}"
 
 comics = JSON.parse(response)
-comics["series"].each do |comic|
+data = comics["data"]["results"]
+data.each do |comic|
   Comic.create!(
     publisher: "Marvel",
     title: comic["title"],
     creators:
       comic["creators"]["items"].each do |creator|
-        name = creator["name"]
-        role = creator["role"]
-        "#{name}, #{role}"
+        creator["name"] + ", " + creator["role"]
       end,
     characters: comic["characters"]["items"].each do |character|
       character["name"]
     end,
-    photo: comic["images"]["path"] + "." + comic["images"]["extension"]
+    photo: comic["thumbnail"]["path"] + "." + comic["thumbnail"]["extension"]
   )
 end
