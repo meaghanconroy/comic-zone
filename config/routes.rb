@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   resources :users do
     resources :comics, only: [:index, :show]
   end
+  namespace :api do
+    namespace :v1 do
+      resources :venues, only: [:index, :show]
+    end
+  end
 
   resources :comics, only:[:index, :show, :create] do
     resources :subscriptions

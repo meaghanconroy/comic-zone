@@ -1,10 +1,14 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ComicsList from './components/ComicsList'
 
 $(function() {
+  let app = document.getElementById( 'app' );
+  if (app) {
   ReactDOM.render(
-    <h1>Boo yaa</h1>,
-    document.getElementById('app')
-  );
+      <ComicsList />,
+      app
+    );
+  };
 });
