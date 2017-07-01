@@ -5,7 +5,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 require File.join(File.dirname(__FILE__), 'support/factory_girl')
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
-# include JsonHelper
+include JsonHelper
 include AuthenticationHelper
 ActiveRecord::Migration.maintain_test_schema!
 

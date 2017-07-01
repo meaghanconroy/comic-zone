@@ -26,10 +26,8 @@ feature "Admin deletes a comic" do
     visit root_path
     sign_in_as(admin)
     click_link "Update Comics"
-    visit comics_path
-    within("div##{comic.id}") do
-      click_link "Delete Comic"
-    end
+    visit comic_path(comic)
+    click_link "Delete Comic"
     expect(page).to have_content("Successfully deleted comic")
     expect(page).to_not have_content (comic.title)
 

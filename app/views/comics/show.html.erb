@@ -30,3 +30,9 @@
 <% if @user.comics.include?(@comic) %>
   <%= link_to "End Subscription", comic_subscription_path(@comic, @subscription), method: :delete %>
 <% end %>
+<% if current_user.try(:admin?) %>
+  <p>
+    <%= link_to "Delete Comic", admin_comic_path(@comic), method: :delete %> |
+    <%= link_to "Update Comic Info", admin_users_path %>
+  </p>
+<% end %>

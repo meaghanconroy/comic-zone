@@ -1,4 +1,9 @@
 class SubscriptionsController < ApplicationController
+  def index
+    @user = current_user
+    @comics = @user.comics
+    @title = "#{@comics.length} CURRENT SUBSCRIPTIONS:"
+  end
   def new
     @subscription = Subscription.new
     @comic = Comic.find(params[:comic_id])

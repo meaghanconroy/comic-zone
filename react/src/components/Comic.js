@@ -6,7 +6,7 @@ class Comic extends Component {
   }
   render() {
     return (
-      <div>
+      <div id={this.props.id}>
         <a href={`/comics/${this.props.id}`}>
           <h3>{this.props.title}</h3>
         </a>

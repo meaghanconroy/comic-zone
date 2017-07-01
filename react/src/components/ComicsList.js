@@ -3,7 +3,7 @@ import Comic from './Comic';
 
 class ComicsList extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       comics: []
     };
@@ -22,8 +22,8 @@ class ComicsList extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      this.setState({ comics: body["comics"] });
-    });
+      this.setState({ comics: body["comics"] })
+    })
     .catch(error => console.error(`Error in fetch ${error.message}`));
   }
 
