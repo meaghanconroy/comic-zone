@@ -27,19 +27,26 @@ class ComicsList extends Component {
     .catch(error => console.error(`Error in fetch ${error.message}`));
   }
 
+
   componentDidMount(){
     this.getData();
   }
   render() {
-    return (
-      <div>
-        debugger;
+    let comics = this.state.comics;
+    console.log(comics);
+    let listComics = comics.map((comic, index) => {
+      return (
         <Comic
           key={index}
           id={comic.id}
           publisher={comic.publisher}
           title={comic.title}
         />
+      )
+    })
+    return (
+      <div>
+        {listComics}
       </div>
     )
   }

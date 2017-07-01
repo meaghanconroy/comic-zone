@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   namespace :api do
     namespace :v1 do
-      resources :venues, only: [:index, :show]
+      resources :comics, only: [:index, :show]
     end
   end
 
