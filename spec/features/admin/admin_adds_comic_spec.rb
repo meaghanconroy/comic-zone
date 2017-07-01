@@ -43,7 +43,6 @@ feature "Admin creates a comic record" do
     fill_in 'Creators', with: "Silly person one, writer;Silly person 3, colorist"
     fill_in 'Characters', with: "Fake Character;Faker Character"
     click_button 'Add Comic'
-    save_and_open_page
     expect(page).to_not have_content("Successfully created comic")
     expect(page).to have_content("Publisher can't be blank")
   end

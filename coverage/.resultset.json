@@ -28,6 +28,27 @@
         1,
         null
       ],
+      "/Users/meaghanconroy/comic-zone/app/controllers/api/v1/comics_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/meaghanconroy/comic-zone/app/controllers/application_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        60,
+        60,
+        null,
+        null
+      ],
       "/Users/meaghanconroy/comic-zone/app/models/comic.rb": [
         1,
         1,
@@ -49,30 +70,16 @@
         null,
         null
       ],
-      "/Users/meaghanconroy/comic-zone/app/controllers/application_controller.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        62,
-        62,
-        null,
-        null
-      ],
       "/Users/meaghanconroy/comic-zone/app/controllers/comics_controller.rb": [
         1,
         1,
-        14,
-        9,
-        9,
+        5,
+        5,
+        5,
         null,
-        5,
-        5,
-        5,
+        0,
+        0,
+        0,
         null,
         null,
         null,
@@ -97,9 +104,9 @@
         null,
         null,
         1,
-        4,
-        4,
-        4,
+        6,
+        6,
+        6,
         null,
         null,
         1,
@@ -143,6 +150,11 @@
       "/Users/meaghanconroy/comic-zone/app/controllers/subscriptions_controller.rb": [
         1,
         1,
+        5,
+        5,
+        5,
+        null,
+        1,
         0,
         0,
         null,
@@ -182,6 +194,6 @@
         0
       ]
     },
-    "timestamp": 1498837080
+    "timestamp": 1498923289
   }
 }

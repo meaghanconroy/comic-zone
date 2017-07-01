@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature "User views list of all comics" do
+feature "User views specific comic" do
   let!(:user) do
     FactoryGirl.create(:user)
   end
@@ -8,11 +8,10 @@ feature "User views list of all comics" do
     FactoryGirl.create(:comic)
   end
 
-  scenario 'a user can view a list of all comics' do
+  scenario 'a user can view a specific' do
     visit root_path
     sign_in_as(user)
-    visit comics_path
-    click_link "#{first_comic.title}"
+    visit comic_path(first_comic)
     expect(page).to have_content(first_comic.publisher)
     expect(page).to have_content(first_comic.title)
     expect(page).to have_content(first_comic.creators.first)

@@ -1,11 +1,13 @@
 <%= @title %>
+<div id='app'>
+</div>
 <% if current_user.try(:admin?) %>
   <p>
-    <%= link_to "Add Comic", new_admin_comic_path %> 
+    <%= link_to "Add Comic", new_admin_comic_path %>
   </p>
 <% end %>
 
-<% @comics.each do |comic| %>
+<!-- <% @comics.each do |comic| %>
   <div id= <%= comic.id %> >
     <h5>
       <%= link_to "#{comic.title}", comic_path(comic) %>
@@ -46,4 +48,4 @@
       </p>
     <% end %>
   </div>
-<% end %>
+<% end %> -->
