@@ -36,9 +36,20 @@ class ComicsController < ApplicationController
     @subscription = Subscription.find_by(user: @user, comic: @comic)
   end
 
+  def update
+    @comic = Comic.find(params[:id])
+    if @comic.update_attributes(comic_params)
+      flash[:notice] = "Comic Updated"
+      redirect_to comic_path(@comic)
+    else
+      flash[:notice] = @comic.errors.full_messages.to_sentence
+      render "admin/comics/edit"
+    end
+  end
+
   private
 
   def comic_params
-    params.require(:comic).permit(:publisher, :title, :creators, :characters, :photo, :keywords)
+    params.require(:comic).permit(:publisher, :title, :creators, :characters, :photo, :keywords, :ongoing)
   end
 end

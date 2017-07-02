@@ -44,8 +44,8 @@
         1,
         null,
         1,
-        60,
-        60,
+        64,
+        64,
         null,
         null
       ],
@@ -73,9 +73,9 @@
       "/Users/meaghanconroy/comic-zone/app/controllers/comics_controller.rb": [
         1,
         1,
-        5,
-        5,
-        5,
+        7,
+        7,
+        7,
         null,
         0,
         0,
@@ -104,15 +104,26 @@
         null,
         null,
         1,
-        6,
-        6,
-        6,
+        8,
+        8,
+        8,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        null,
         null,
         null,
         1,
         null,
         1,
-        16,
+        17,
         null,
         null
       ],
@@ -120,6 +131,9 @@
         1,
         1,
         2,
+        null,
+        1,
+        1,
         null,
         1,
         1,
@@ -194,6 +208,6 @@
         0
       ]
     },
-    "timestamp": 1498923289
+    "timestamp": 1499019509
   }
 }

@@ -24,15 +24,19 @@
     </ul>
   </li>
 <% end %>
+<% if @comic.ongoing? %>
+  <p>Ongoing: TRUE</p>
+<% else %>
+  <p>Ongoing: FALSE</p>
+<% end %>
 <% if !@user.comics.include?(@comic)%>
   <%= link_to "Add Subscription", comic_subscriptions_path(@comic), method: :post %>
-<% end %>
-<% if @user.comics.include?(@comic) %>
+<% elsif @user.comics.include?(@comic) %>
   <%= link_to "End Subscription", comic_subscription_path(@comic, @subscription), method: :delete %>
 <% end %>
 <% if current_user.try(:admin?) %>
   <p>
     <%= link_to "Delete Comic", admin_comic_path(@comic), method: :delete %> |
-    <%= link_to "Update Comic Info", admin_users_path %>
+    <%= link_to "Edit Comic", edit_admin_comic_path(@comic) %>
   </p>
 <% end %>

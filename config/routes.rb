@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :comics, only:[:index, :show, :create] do
+  resources :comics, only:[:index, :show, :create, :update] do
     resources :subscriptions
   end
   namespace :admin do
