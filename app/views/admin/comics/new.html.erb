@@ -7,18 +7,17 @@
   <%= f.label :title, "Title: " %>
   <%= f.text_field :title %>
   </br>
-  <%= f.label :creators, "Creators: " %>
-  <%= f.text_area :creators %>
+  <%= f.label :writer, "Writer: " %>
+  <%= f.text_area :writer %>
   </br>
-  <p class="tips"> (Separate creators with ";", ex: "Jill Pencil, writer;Jay Painter, colorist") </p>
+  <%= f.label :artist, "Artist: " %>
+  <%= f.text_area :artist %>
   </br>
-  <%= f.label :characters, "Characters: " %>
-  <%= f.text_area :characters %>
+  <%= f.label :main_character, "Main Character: " %>
+  <%= f.text_area :main_character %>
   </br>
-  <p class="tips"> (Separate characters with ";", ex: "Captain Marvel;Hellcat/Ms. Marvel") </p>
-  </br>
-  <%= f.label :photo %>
-  <%= f.text_area :photo %>
+  <%= f.label :other_characters, "Other Character(s): " %>
+  <%= f.text_area :other_characters %>
   </br>
   <%= f.submit "Add Comic" %>
 <% end %>

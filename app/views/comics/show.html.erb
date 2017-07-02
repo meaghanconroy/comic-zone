@@ -1,27 +1,26 @@
 <%= @comic.title %>
 <%= @comic.publisher %>
-<% if @comic.creators %>
+<% if @comic.writer && @comic.artist %>
   <li>
     <ul>
       Creators:
-      <% @comic.creators.each do |creator| %>
-      <li>
-        <%= creator %>
+      <li>Writer:
+        <%= @comic.writer %>
       </li>
-      <% end %>
+      <li>Artist:
+        <%= @comic.artist %>
+      </li>
     </ul>
   </li>
 <% end %>
-<% if @comic.characters %>
+<% if @comic.main_character %>
   <li>
-    <ul>
-      Characters:
-      <% @comic.characters.each do |character| %>
-      <li>
-        <%= character %>
-      </li>
-      <% end %>
-    </ul>
+    Main Character: <%= @comic.main_character %>
+  </li>
+<% end %>
+<% if @comic.other_characters %>
+  <li>
+    Other Character(s): <%= @comic.other_characters %>
   </li>
 <% end %>
 <% if @comic.ongoing? %>

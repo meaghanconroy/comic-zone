@@ -23,13 +23,6 @@ first_data.each do |comic|
   Comic.create!(
     publisher: "Marvel",
     title: comic["title"],
-    creators:
-      comic["creators"]["items"].each do |creator|
-        creator["name"]
-      end,
-    characters: comic["characters"]["items"].each do |character|
-      character["name"]
-    end,
     photo: comic["thumbnail"]["path"] + "." + comic["thumbnail"]["extension"]
   )
 end
@@ -39,13 +32,6 @@ second_data.each do |comic|
   Comic.create!(
     publisher: "Marvel",
     title: comic["title"],
-    creators:
-      comic["creators"]["items"].each do |creator|
-        creator["name"] + ", " + creator["role"]
-      end,
-    characters: comic["characters"]["items"].each do |character|
-      character["name"]
-    end,
     photo: comic["thumbnail"]["path"] + "." + comic["thumbnail"]["extension"]
   )
 end
@@ -55,13 +41,6 @@ third_data.each do |comic|
   Comic.create!(
     publisher: "Marvel",
     title: comic["title"],
-    creators:
-      comic["creators"]["items"].each do |creator|
-        creator["name"] + ", " + creator["role"]
-      end,
-    characters: comic["characters"]["items"].each do |character|
-      character["name"]
-    end,
     photo: comic["thumbnail"]["path"] + "." + comic["thumbnail"]["extension"]
   )
 end
@@ -71,13 +50,6 @@ fourth_data.each do |comic|
   Comic.create!(
     publisher: "Marvel",
     title: comic["title"],
-    creators:
-      comic["creators"]["items"].each do |creator|
-        creator["name"] + ", " + creator["role"]
-      end,
-    characters: comic["characters"]["items"].each do |character|
-      character["name"]
-    end,
     photo: comic["thumbnail"]["path"] + "." + comic["thumbnail"]["extension"]
   )
 end
@@ -87,13 +59,6 @@ fifth_data.each do |comic|
   Comic.create!(
     publisher: "Marvel",
     title: comic["title"],
-    creators:
-      comic["creators"]["items"].each do |creator|
-        creator["name"] + ", " + creator["role"]
-      end,
-    characters: comic["characters"]["items"].each do |character|
-      character["name"]
-    end,
     photo: comic["thumbnail"]["path"] + "." + comic["thumbnail"]["extension"]
   )
 end
@@ -103,14 +68,6 @@ sixth_data.each do |comic|
   Comic.create!(
     publisher: "Marvel",
     title: comic["title"],
-    creators:
-      comic["creators"]["items"].each do |creator|
-        creator["name"] + ", " + creator["role"]
-      end,
-    characters: comic["characters"]["items"].each do |character|
-      character["name"]
-    end,
     photo: comic["thumbnail"]["path"] + "." + comic["thumbnail"]["extension"]
   )
 end
-Comic.create!(publisher: "Image", title: "Saga", creators: ["Brian K Vaughn, writer", "Fiona Staples, illustrator"], characters: ["Marko", "Alana", "Hazel"], ongoing: true)
