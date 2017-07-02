@@ -20,11 +20,15 @@ feature "Admin creates a comic record" do
     click_link "Add Comic"
     fill_in 'Publisher', with: comic.publisher
     fill_in 'Title', with: comic.title
-    fill_in 'Creator', with: "#{comic.creators.first};Joe Painter, colorist"
-    fill_in 'Characters', with: "#{comic.characters.first};Hellcat/Captain Marvel"
+    fill_in 'Creators', with: "#{comic.creators.first};Joe Painter, colorist"
+    fill_in 'Characters', with: "#{comic.characters.first};Hellcat;Captain Marvel"
     click_button 'Add Comic'
     expect(page).to have_content("Successfully added comic")
     expect(page).to have_content(comic.title)
+    save_and_open_page
+    expect(page).to have_content(comic.creators[0])
+    expect(page).to have_content(comic.creators[1])
+
 
   end
   scenario "an non-admin cannot create a comic record" do
@@ -40,7 +44,7 @@ feature "Admin creates a comic record" do
     click_link "Add Comic"
     fill_in 'Publisher', with: ''
     fill_in 'Title', with: 'Unpublished Comic'
-    fill_in 'Creators', with: "Silly person one, writer;Silly person 3, colorist"
+    fill_in 'Creators', with: "Silly person one: writer,Silly person 3: colorist"
     fill_in 'Characters', with: "Fake Character;Faker Character"
     click_button 'Add Comic'
     expect(page).to_not have_content("Successfully created comic")
