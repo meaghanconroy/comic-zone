@@ -1,7 +1,24 @@
 <h1> Edit Comic </h1>
 
 <%= form_for @comic do |f| %>
-
+  <%= f.label :publisher, "Publisher: " %>
+  <%= f.text_field :publisher %>
+  </br>
+  <%= f.label :title, "Title: " %>
+  <%= f.text_field :title %>
+  </br>
+  <%= f.label :writer, "Writer: " %>
+  <%= f.text_area :writer %>
+  </br>
+  <%= f.label :artist, "Artist: " %>
+  <%= f.text_area :artist %>
+  </br>
+  <%= f.label :main_character, "Main Character: " %>
+  <%= f.text_area :main_character %>
+  </br>
+  <%= f.label :other_characters, "Other Character(s): " %>
+  <%= f.text_area :other_characters %>
+  </br>
   <%= f.label :ongoing, "Currently Ongoing", value: true %>
   <%= f.radio_button :ongoing, true %>
   </br>
