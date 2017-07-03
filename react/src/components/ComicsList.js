@@ -54,7 +54,7 @@ class ComicsList extends Component {
   render() {
     let indexOfLastComic = this.state.currentPage * this.state.comicsPerPage;
     let indexOfFirstComic = indexOfLastComic - this.state.comicsPerPage;
-    let comics = this.state.comics
+    let comics = this.state.comics;
     let currentComics;
 
     if (indexOfFirstComic < 0) {
