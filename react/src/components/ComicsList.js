@@ -17,17 +17,17 @@ class ComicsList extends Component {
 
   previousPage(event) {
     let newPage = this.state.currentPage - 1;
-    this.setState({ currentPage: newPage })
+    this.setState({ currentPage: newPage });
   }
 
   nextPage(event) {
     let newPage = this.state.currentPage + 1;
-    this.setState({ currentPage: newPage })
+    this.setState({ currentPage: newPage });
   }
 
   handleClick(event){
     this.setState({ currentPage: event.target.id });
-  };
+  }
 
   getData() {
     fetch('/api/v1/comics.json')
@@ -58,11 +58,11 @@ class ComicsList extends Component {
     let currentComics;
 
     if (indexOfFirstComic < 0) {
-      currentComics = comics.slice(0, 30)
+      currentComics = comics.slice(0, 30);
     } else if (indexOfLastComic > comics.length) {
-      currentComics = comics.slice(indexOfFirstComic, indexOfLastComic)
+      currentComics = comics.slice(indexOfFirstComic, indexOfLastComic);
     } else {
-      currentComics = this.state.comics.slice(indexOfFirstComic, indexOfLastComic)
+      currentComics = this.state.comics.slice(indexOfFirstComic, indexOfLastComic);
     }
     let finalComics = currentComics.map((comic, index) => {
       return (
