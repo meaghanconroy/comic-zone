@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170627184011) do
+ActiveRecord::Schema.define(version: 20170702214315) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,11 +18,13 @@ ActiveRecord::Schema.define(version: 20170627184011) do
   create_table "comics", force: :cascade do |t|
     t.string "publisher", null: false
     t.string "title", null: false
-    t.string "creators", array: true
-    t.string "characters", array: true
     t.string "photo"
     t.string "keywords"
     t.boolean "ongoing", default: true
+    t.string "main_character"
+    t.string "other_characters"
+    t.string "writer"
+    t.string "artist"
   end
 
   create_table "subscriptions", force: :cascade do |t|

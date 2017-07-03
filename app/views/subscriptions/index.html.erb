@@ -1,4 +1,4 @@
-<%= "#{@subscriptions.length} CURRENT SUBSCRIPTIONS:" %></ br>
-<% @subscriptions.each do |subscription| %>
-<p><%= link_to "#{subscription.comic.title}", comic_path(subscription.comic) %> </p> </ br>
+<%= @title %></ br>
+<% @comics.each do |comic| %>
+<p><%= link_to "#{comic.title}", comic_path(comic) %> </p> </ br>
 <% end %>

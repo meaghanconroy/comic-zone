@@ -1,4 +1,4 @@
-<h1> Add Comic </h1>
+<h1> Edit Comic </h1>
 
 <%= form_for @comic do |f| %>
   <%= f.label :publisher, "Publisher: " %>
@@ -19,5 +19,11 @@
   <%= f.label :other_characters, "Other Character(s): " %>
   <%= f.text_area :other_characters %>
   </br>
-  <%= f.submit "Add Comic" %>
+  <%= f.label :ongoing, "Currently Ongoing", value: true %>
+  <%= f.radio_button :ongoing, true %>
+  </br>
+  <%= f.label :ongoing, "Series Ended", value: false %>
+  <%= f.radio_button :ongoing, false %>
+  </br>
+  <%= f.submit "Submit Changes" %>
 <% end %>

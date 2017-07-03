@@ -3,9 +3,18 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users do
     resources :comics, only: [:index, :show]
+    resources :subscriptions
+  end
+  namespace :api do
+    namespace :v1 do
+      resources :comics, only: [:index, :show] do
+        resources :subscriptions
+        resources :users
+      end
+    end
   end
 
-  resources :comics, only:[:index, :show, :create] do
+  resources :comics, only:[:index, :show, :create, :update] do
     resources :subscriptions
   end
   namespace :admin do

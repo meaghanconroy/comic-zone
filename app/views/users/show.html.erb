@@ -2,4 +2,9 @@
   <%= @user.username %>'s Homepage
 </h2>
 <h4>Welcome, <%= @user.first_name %></h4>
-<%= link_to "Your Subscriptions", user_comics_path(@user) %>
+<% if @user.avatar.present? %>
+  <p class="profile-picture">
+    <img src="<%=@user.avatar%>" height="100" width=100>
+  </p>
+<% end %>
+<%= link_to "Your Subscriptions", user_subscriptions_path(@user) %>
