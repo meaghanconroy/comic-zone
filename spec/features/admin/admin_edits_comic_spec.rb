@@ -24,6 +24,21 @@ feature "Admin edits a comic" do
     expect(page).to have_content("Ongoing: FALSE")
 
   end
+
+  scenario "an admin incorrectly edits a comic's info" do
+    visit root_path
+    sign_in_as(admin)
+    click_link "Update Comics"
+    visit comic_path(comic)
+    click_link "Edit Comic"
+
+    fill_in 'Publisher', with: ""
+    choose("Series Ended")
+    click_button "Submit Changes"
+    expect(page).to_not have_content("Comic Updated")
+    expect(page).to have_content("Publisher can't be blank")
+
+  end
   scenario "an non-admin cannot edit a comic" do
     visit root_path
     sign_in_as(user)
