@@ -21,7 +21,7 @@ timestamp = ts.to_s
 
 hash = Digest::MD5.hexdigest("#{timestamp}"+"#{private_key}"+"#{public_key}")
 
-first_response = RestClient.get "http://gateway.marvel.com/v1//public/series", {params: {ts: timestamp, apikey: ENV['MARVEL_API_PUBLIC_KEY'], hash: hash, seriesType: ongoing, limit: 50}}
+first_response = RestClient.get "http://gateway.marvel.com/v1//public/series", {params: {ts: timestamp, apikey: ENV['MARVEL_API_PUBLIC_KEY'], hash: hash, seriesType: "ongoing", limit: 50}}
 # second_response = RestClient.get "http://gateway.marvel.com/v1//public/series?ts=#{timestamp_two}&apikey=#{public_key}&hash=#{hash}&seriesType=ongoing&limit=50&offset=50"
 # third_response = RestClient.get "http://gateway.marvel.com/v1//public/series?ts=#{timestamp_three}&apikey=#{public_key}&hash=#{hash}&seriesType=ongoing&limit=50&offset=100"
 # fourth_response = RestClient.get "http://gateway.marvel.com/v1//public/series?ts=#{timestamp_four}&apikey=#{public_key}&hash=#{hash}&seriesType=ongoing&limit=50&offset=150"
