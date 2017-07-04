@@ -93,10 +93,13 @@ class ComicsList extends Component {
     )
   })
     return (
-      <div>
+      <div id="comics-menu">
         {finalComics}
         <div className="pagination">
           {renderPageNumbers}
+        </div>
+        <div className="react-footer">
+          <a href="http://marvel.com" className="attribution">Data provided by Marvel. © 2014 Marvel</a>
         </div>
       </div>
     )

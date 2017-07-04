@@ -1,4 +1,9 @@
-<%= @title %></ br>
+<h2 class="page-title"><%= @title %></h2></ br>
 <% @comics.each do |comic| %>
-<p><%= link_to "#{comic.title}", comic_path(comic) %> </p> </ br>
+<div class="comic-link">
+  <h5><%= link_to "#{comic.title}", comic_path(comic)%> </h5> </ br>
+</div>
 <% end %>
+<div class="footer">
+  <a href="http://marvel.com" class="attribution">Data provided by Marvel. © 2014 Marvel</a>
+</div>

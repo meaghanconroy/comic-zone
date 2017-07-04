@@ -1,4 +1,4 @@
-<h2>
+<h2 class="page-title">
   <%= @user.username %>'s Homepage
 </h2>
 <h4>Welcome, <%= @user.first_name %></h4>
@@ -8,3 +8,6 @@
   </p>
 <% end %>
 <%= link_to "Your Subscriptions", user_subscriptions_path(@user) %>
+<div class="footer">
+  <a href="http://marvel.com" class="attribution">Data provided by Marvel. © 2014 Marvel</a>
+</div>

@@ -56,7 +56,7 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #cc4b37,
 );
-$green: #1aff00;
+$button-red: #cf0404;
 $gold: #deaf5a;
 $link: #0d7373;
 $nav-blue: #152b4a;
@@ -69,7 +69,7 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $back-gray;
 $body-font-color: $black;
-$body-font-family: 'Raleway', Roboto, Arial, sans-serif;
+$body-font-family: 'Droid Sans', Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -110,7 +110,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: "Abril Fatface";
+$header-font-family: "Boogaloo";
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;

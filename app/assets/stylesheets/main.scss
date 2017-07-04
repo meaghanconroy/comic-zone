@@ -1,15 +1,112 @@
 $gold: #deaf5a;
 $nav-blue: #152b4a;
 $back-gray: #dae0e0;
+$button-red: #cf0404;
+
 h1 {
   a {
     text-decoration: none;
     color: $gold;
+    font-family: 'Boogaloo', cursive;
+    font-size: 50pt;
   }
 }
-.menu {
-  a {
-    text-decoration: none;
+h2 h5 {
+  color: $nav-blue;
+  text-align: center;
+}
+
+.page-title {
+  text-align: center;
+  font-family: 'Boogaloo', cursive;
+  font-size: 40pt;
+  background-color: $button-red;
+  color: #ffd600;
+  padding: 20px;
+}
+
+.top-bar {
+  width: 100%;
+  background-color: $nav-blue;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  .top-bar-left {
+    background-color: $nav-blue;
     color: $gold;
+    a {
+      color: $gold;
+      font-family: 'Boogaloo', cursive;
+    }
+  }
+  .menu {
+    padding-top: 40px;
+    background-color: $nav-blue;
+    a {
+      color: $gold;
+      font-weight: bold;
+      font-family: 'Droid Sans', sans-serif;
+    }
+  }
+}
+
+.comic-link {
+  h5 {
+    text-decoration: none;
+    color: $nav-blue;
+    font-family: 'Droid Sans', sans-serif;
+    a {
+      text-decoration: none;
+      color: $nav-blue;
+    }
+  }
+}
+#outer-wrapper {
+  text-align: center relative;
+  padding: 30px;
+}
+#wrapper {
+  background-color: #ffffff;
+  padding: 40px;
+  border: 40px solid $nav-blue;
+  font-family: 'Droid Sans', sans-serif;
+  a {
+    color: $button-red
+  }
+}
+#comics-menu {
+  text-align: left;
+}
+.footer {
+  font-size: 10pt;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+  text-align: right;
+}
+.react-footer {
+  font-size: 10pt;
+  text-align: right;
+}
+.attribution {
+  font-size: 10pt;
+  color: #000000;
+  text-decoration: underline;
+  text-align: right;
+}
+.pagination {
+  clear: both;
+  position: relative;
+  text-align: center;
+  li {
+    background-color: $button-red;
+    color: #ffffff;
+    border: 2px solid $nav-blue;
+    border-radius: 10px;
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 5px;
   }
 }

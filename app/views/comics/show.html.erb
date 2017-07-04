@@ -1,7 +1,7 @@
+<h2 class="page-title"><%= @comic.title %></h2>
 <% if @comic.photo %>
-  <img src="<%=@comic.photo %>" height=800 width=800>
+  </br><img src="<%=@comic.photo %>" height=800 width=800></br>
 <% end %>
-<%= @comic.title %>
 <%= @comic.publisher %>
 <% if @comic.writer && @comic.artist %>
   <li>
@@ -44,3 +44,5 @@
     </p>
   <% end %>
 <% end %>
+</br>
+<a href="http://marvel.com" class="attribution">Data provided by Marvel. © 2014 Marvel</a>
