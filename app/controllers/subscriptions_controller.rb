@@ -2,7 +2,7 @@ class SubscriptionsController < ApplicationController
   def index
     @user = current_user
     @comics = @user.comics
-    @title = "#{@comics.length} CURRENT SUBSCRIPTIONS:"
+    @title = "#{@comics.length} CURRENT SUBSCRIPTION(S):"
   end
   def new
     @subscription = Subscription.new

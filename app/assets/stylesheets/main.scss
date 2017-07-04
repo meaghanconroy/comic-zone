@@ -1,0 +1,123 @@
+$gold: #deaf5a;
+$bright-yellow: #ffd600;
+$nav-blue: #152b4a;
+$back-gray: #dae0e0;
+$button-red: #cf0404;
+$white: #ffffff;
+$black: #000000
+
+h1 {
+  a {
+    color: $gold;
+    font-family: 'Boogaloo', cursive;
+    font-size: 50pt;
+    text-decoration: none;
+  }
+}
+
+h2 h5 {
+  color: $nav-blue;
+  text-align: center;
+}
+
+.page-title {
+  background-color: $button-red;
+  color: $bright-yellow;
+  font-family: 'Boogaloo', cursive;
+  font-size: 40pt;
+  padding: 20px;
+  text-align: center;
+}
+
+.top-bar {
+  background-color: $nav-blue;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  .top-bar-left {
+    background-color: $nav-blue;
+    color: $gold;
+    a {
+      color: $gold;
+      font-family: 'Boogaloo', cursive;
+    }
+  }
+  .menu {
+    background-color: $nav-blue;
+    padding-top: 40px;
+    a {
+      color: $gold;
+      font-weight: bold;
+      font-family: 'Droid Sans', sans-serif;
+    }
+  }
+}
+
+.comic-link {
+  h5 {
+    color: $nav-blue;
+    font-family: 'Droid Sans', sans-serif;
+    text-decoration: none;
+    a {
+      color: $nav-blue;
+      text-decoration: none;
+    }
+  }
+}
+
+#outer-wrapper {
+  padding: 30px;
+  text-align: center relative;
+}
+
+#wrapper {
+  background-color: $white;
+  border: 40px solid $nav-blue;
+  font-family: 'Droid Sans', sans-serif;
+  padding: 40px;
+  a {
+    color: $button-red
+  }
+}
+
+#comics-menu {
+  text-align: left;
+}
+
+.footer {
+  font-size: 10pt;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  text-align: right;
+}
+
+.react-footer {
+  font-size: 10pt;
+  text-align: right;
+}
+
+.attribution {
+  color: $black;
+  font-size: 10pt;
+  text-decoration: underline;
+  text-align: right;
+}
+
+.pagination {
+  clear: both;
+  position: relative;
+  text-align: center;
+  li {
+    background-color: $button-red;
+    border: 2px solid $nav-blue;
+    border-radius: 10px;
+    color: $white;
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 5px;
+  }
+}

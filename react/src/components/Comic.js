@@ -6,13 +6,9 @@ class Comic extends Component {
   }
   render() {
     return (
-      <div id={this.props.id}>
+      <div className="comic-link" id={this.props.id}>
         <a href={`/comics/${this.props.id}`}>
-          <p className="crop">
-            <img src={this.props.photo}/>
-          </p>
-          <h3>{this.props.title}</h3>
-          <h3>{this.props.publisher}</h3>
+          <h5>{this.props.title}-{this.props.publisher}</h5>
         </a>
       </div>
     )

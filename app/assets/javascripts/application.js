@@ -13,3 +13,10 @@
 //= require rails-ujs
 //= require jquery
 //= require_tree .
+
+$(function(){ $(document).foundation(); });
+
+if (Modernizr.testAllProps('gridRowGap') === false) {
+  $('body').append("<div class='no-grid-warning'>Your browser does not support CSS-Grid - this demo requires CSS-grid to function properly</div>");
+}
+Contact GitHub API Training Shop Blog About

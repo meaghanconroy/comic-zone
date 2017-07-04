@@ -8,6 +8,8 @@ gem 'carrierwave', '~> 1.1'
 gem 'devise'
 gem 'dotenv'
 gem 'fog'
+gem 'foundation-rails'
+
 gem 'jquery-rails'
 gem 'dotenv-rails'
 gem 'rails', '~> 5.1.1'
