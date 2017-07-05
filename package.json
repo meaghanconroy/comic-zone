@@ -1,5 +1,14 @@
 {
   "name": "comic-zone",
+  "main": "webpack.config.js",
+  "scripts": {
+    "heroku-postbuild": "NODE_ENV=production npm run webpack -- -p",
+    "start": "npm run webpack -- --watch",
+    "test": "node_modules/.bin/karma start react/karma.conf.js",
+    "webpack": "node_modules/.bin/webpack --config ./react/webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "babel-core": "^6.8.0",
     "babel-loader": "^6.2.4",
@@ -17,15 +26,6 @@
     "webpack": "^1.13.0",
     "whatwg-fetch": "1.0.0"
   },
-  "main": "webpack.config.js",
-  "scripts": {
-    "heroku-postbuild": "NODE_ENV=production npm run webpack -- -p",
-    "start": "npm run webpack -- --watch",
-    "test": "node_modules/.bin/karma start react/karma.conf.js",
-    "webpack": "node_modules/.bin/webpack --config ./react/webpack.config.js"
-  },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "enzyme": "^2.8.2",
     "isparta-loader": "^2.0.0",
