@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'pages#home'
+  root 'comics#index'
   devise_for :users
   resources :users do
     resources :comics, only: [:index, :show]
