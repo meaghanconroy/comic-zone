@@ -14,4 +14,5 @@ class Comic extends Component {
     )
   }
 }
-export default Comic;
+import Comic from "./components/Comic";
+module.exports = Comic;

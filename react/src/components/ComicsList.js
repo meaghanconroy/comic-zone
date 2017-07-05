@@ -105,5 +105,5 @@ class ComicsList extends Component {
     )
   }
 }
-
-export default ComicsList
+import ComicsList from "./components/ComicsList";
+module.exports = ComicsList;
