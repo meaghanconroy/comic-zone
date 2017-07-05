@@ -4,4 +4,8 @@ class AvatarUploader < CarrierWave::Uploader::Base
   else
     storage :fog
   end
+
+  def extension_white_list
+    %w(jpg jpeg gif png)
+  end
 end
