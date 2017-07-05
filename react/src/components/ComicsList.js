@@ -30,7 +30,7 @@ class ComicsList extends Component {
   }
 
   getData() {
-    fetch('https://comiczone.herokuapp.com/api/v1/comics.json')
+    fetch('/api/v1/comics.json')
     .then(response => {
       if (response.ok) {
         return response;
