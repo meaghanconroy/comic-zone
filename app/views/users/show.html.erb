@@ -1,13 +1,14 @@
-<h2 class="page-title">
-  <%= @user.username %>'s Homepage
-</h2>
-<h4>Welcome, <%= @user.first_name %></h4>
-<% if @user.avatar.present? %>
-  <p class="profile-picture">
-    <img src="<%=@user.avatar%>" height="100" width=100>
-  </p>
-<% end %>
-<%= link_to "Your Subscriptions", user_subscriptions_path(@user) %>
-<div class="footer">
-  <a href="http://marvel.com" class="attribution">Data provided by Marvel. © 2014 Marvel</a>
+<div class="profile-page">
+
+  <h2 class="page-title">
+    <%= @user.username %>'s Homepage
+  </h2>
+  <h4>Welcome, <%= @user.first_name %></h4>
+  <% if @user.avatar.present? %>
+    <p class="profile-picture">
+      <img src="<%=@user.avatar%>" height="100" width=100>
+    </p>
+  <% end %>
+  <%= link_to "Your Subscriptions", user_subscriptions_path(@user) %>
+
 </div>
