@@ -1,4 +1,8 @@
 {
+  "repository": {
+  "type": "git",
+  "url": "git://github.com/meaghanconroy/comic-zone.git"
+},
   "name": "comic-zone",
   "main": "webpack.config.js",
   "scripts": {
