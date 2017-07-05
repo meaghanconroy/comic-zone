@@ -1,48 +1,54 @@
-<h2 class="page-title"><%= @comic.title %></h2>
-<% if @comic.photo %>
-  </br><img src="<%=@comic.photo %>" height=800 width=800></br>
-<% end %>
-<%= @comic.publisher %>
-<% if @comic.writer && @comic.artist %>
-  <li>
-    <ul>
-      Creators:
-      <li>Writer:
-        <%= @comic.writer %>
-      </li>
-      <li>Artist:
-        <%= @comic.artist %>
-      </li>
-    </ul>
-  </li>
-<% end %>
-<% if @comic.main_character %>
-  <li>
-    Main Character: <%= @comic.main_character %>
-  </li>
-<% end %>
-<% if @comic.other_characters %>
-  <li>
-    Other Character(s): <%= @comic.other_characters %>
-  </li>
-<% end %>
-<% if @comic.ongoing? %>
-  <p>Ongoing: TRUE</p>
-<% else %>
-  <p>Ongoing: FALSE</p>
-<% end %>
-<% if current_user %>
-  <% if !@user.comics.include?(@comic)%>
-    <%= link_to "Add Subscription", comic_subscriptions_path(@comic), method: :post %>
-  <% elsif @user.comics.include?(@comic) %>
-    <%= link_to "End Subscription", comic_subscription_path(@comic, @subscription), method: :delete %>
+<div class="comics-show">
+  <h2 class="page-title"><%= @comic.title %></h2>
+  <% if @comic.photo %>
+    </br>
+    <div class="comic-photo">
+      <img src="<%=@comic.photo %>">
+    </div>
+    </br>
   <% end %>
-  <% if current_user.try(:admin?) %>
-    <p>
-      <%= link_to "Delete Comic", admin_comic_path(@comic), method: :delete %> |
-      <%= link_to "Edit Comic", edit_admin_comic_path(@comic) %>
-    </p>
+  <%= @comic.publisher %>
+  <% if @comic.writer && @comic.artist %>
+    <li>
+      <ul>
+        Creators:
+        <li>Writer:
+          <%= @comic.writer %>
+        </li>
+        <li>Artist:
+          <%= @comic.artist %>
+        </li>
+      </ul>
+    </li>
   <% end %>
-<% end %>
+  <% if @comic.main_character %>
+    <li>
+      Main Character: <%= @comic.main_character %>
+    </li>
+  <% end %>
+  <% if @comic.other_characters %>
+    <li>
+      Other Character(s): <%= @comic.other_characters %>
+    </li>
+  <% end %>
+  <% if @comic.ongoing? %>
+    <p>Ongoing: TRUE</p>
+  <% else %>
+    <p>Ongoing: FALSE</p>
+  <% end %>
+  <% if current_user %>
+    <% if !@user.comics.include?(@comic)%>
+      <%= link_to "Add Subscription", comic_subscriptions_path(@comic), method: :post %>
+    <% elsif @user.comics.include?(@comic) %>
+      <%= link_to "End Subscription", comic_subscription_path(@comic, @subscription), method: :delete %>
+    <% end %>
+    <% if current_user.try(:admin?) %>
+      <p>
+        <%= link_to "Delete Comic", admin_comic_path(@comic), method: :delete %> |
+        <%= link_to "Edit Comic", edit_admin_comic_path(@comic) %>
+      </p>
+    <% end %>
+  <% end %>
+</div>
 </br>
 <a href="http://marvel.com" class="attribution">Data provided by Marvel. © 2014 Marvel</a>

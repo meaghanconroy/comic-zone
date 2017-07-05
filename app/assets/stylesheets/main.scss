@@ -1,83 +1,116 @@
-$gold: #deaf5a;
+$dust-green: #7daa81;
 $bright-yellow: #ffd600;
-$nav-blue: #152b4a;
 $back-gray: #dae0e0;
-$button-red: #cf0404;
+$button-red: #e4121f;
 $white: #ffffff;
 $black: #000000;
+$link-purple: #06004b;
 
 h1 {
   a {
-    color: $gold;
-    font-family: 'Boogaloo', cursive;
+    color: $dust-green;
+    font-family: 'Dosis', sans-serif;
     font-size: 50pt;
     text-decoration: none;
   }
 }
 
 h2 h5 {
-  color: $nav-blue;
+  color: $black;
   text-align: center;
 }
 
+body {
+  background-color: $black;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
 .page-title {
-  background-color: $button-red;
-  color: $bright-yellow;
-  font-family: 'Boogaloo', cursive;
+  color: $black;
+  font-family: 'Dosis', sans-serif;
   font-size: 40pt;
   padding: 20px;
   text-align: center;
 }
 
 .top-bar {
-  background-color: $nav-blue;
+  background-color: $black;
   text-align: left;
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
+  border-bottom: 20px solid $button-red;
   .top-bar-left {
-    background-color: $nav-blue;
-    color: $gold;
+    background-color: $black;
+    color: $dust-green;
     a {
-      color: $gold;
-      font-family: 'Boogaloo', cursive;
+      color: $dust-green;
+      font-family: 'Dosis', sans-serif;
     }
   }
   .menu {
-    background-color: $nav-blue;
+    background-color: $black;
     padding-top: 40px;
     a {
-      color: $gold;
+      color: $dust-green;
       font-weight: bold;
       font-family: 'Droid Sans', sans-serif;
+      margin: 2px;
+    }
+    .profile-picture {
+      border-radius: 50px;
+      max-height: 40px;
+      overflow: hidden;
     }
   }
 }
 
 .comic-link {
   h5 {
-    color: $nav-blue;
+    color: $link-purple;
     font-family: 'Droid Sans', sans-serif;
     text-decoration: none;
     a {
-      color: $nav-blue;
+      color: $link-purple;
       text-decoration: none;
     }
   }
 }
 
-#outer-wrapper {
-  padding: 30px;
-  text-align: center relative;
+.comics-show {
+  text-align: center;
+}
+
+.comics-photo {
+  max-height: 600px;
+  overflow: hidden;
+  img {
+    height: auto;
+    width: auto;
+  }
+}
+
+.fullWidth {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+  width: 100%;
 }
 
 #wrapper {
   background-color: $white;
-  border: 40px solid $nav-blue;
+  border-left-width: 120px;
+  border-right-width: 120px;
+  border-top: 0;
   font-family: 'Droid Sans', sans-serif;
-  padding: 40px;
+  padding: 20px;
+  text-align: center relative;
+  width: max;
   a {
-    color: $button-red
+    color: $link-purple;
   }
 }
 
@@ -93,11 +126,13 @@ h2 h5 {
   right: 0;
   padding: 1em;
   text-align: right;
+  background-color: $white;
 }
 
 .react-footer {
   font-size: 10pt;
   text-align: right;
+  background-color: $white;
 }
 
 .attribution {
@@ -113,11 +148,15 @@ h2 h5 {
   text-align: center;
   li {
     background-color: $button-red;
-    border: 2px solid $nav-blue;
+    border: 2px solid $black;
     border-radius: 10px;
     color: $white;
     font-size: 12pt;
     font-weight: bold;
     padding: 5px;
   }
+}
+
+.profile-page {
+  text-align: center;
 }

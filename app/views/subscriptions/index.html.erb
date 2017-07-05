@@ -1,4 +1,5 @@
-<h2 class="page-title"><%= @title %></h2></ br>
+<h2 class="page-title"><%= @title %></h2>
+</ br>
 <% @comics.each do |comic| %>
 <div class="comic-link">
   <h5><%= link_to "#{comic.title}", comic_path(comic)%> </h5> </ br>
