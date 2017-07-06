@@ -27,6 +27,7 @@ feature "User views list of all comics" do
     click_link "Add Subscription"
 
     visit user_comics_path(user)
+    visit user_subscriptions_path(user)
     expect(page).to have_content "3 CURRENT SUBSCRIPTION(S):"
     expect(page).to have_link(first_comic.title)
     expect(page).to have_link(second_comic.title)
