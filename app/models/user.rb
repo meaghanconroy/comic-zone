@@ -13,7 +13,16 @@ class User < ApplicationRecord
   validates :email, presence: true, format: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
   after_create :send_welcome_email
 
+  def self.weekly_reminder
+    @user = User.all
+    @user.each do |u|
+      @name = u.first_name
+      @email = u.email
+      UserMailer.weekly_email(@email).deliver_later
+    end
+  end
   private
+
   def send_welcome_email
     UserMailer.welcome_email(self).deliver
   end
