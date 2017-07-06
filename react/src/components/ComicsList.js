@@ -7,12 +7,19 @@ class ComicsList extends Component {
     this.state = {
       comics: [],
       currentPage: 1,
-      comicsPerPage: 30
+      comicsPerPage: 30,
+      search: ''
     };
     this.getData = this.getData.bind(this);
     this.previousPage = this.previousPage.bind(this);
     this.nextPage = this.nextPage.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.updateSearch = this.updateSearch.bind(this);
+  }
+
+  updateSearch(event) {
+    this.setState({ search: event.target.value.substr(0,50) })
+    console.log(this.state.search)
   }
 
   previousPage(event) {
@@ -54,13 +61,17 @@ class ComicsList extends Component {
   render() {
     let indexOfLastComic = this.state.currentPage * this.state.comicsPerPage;
     let indexOfFirstComic = indexOfLastComic - this.state.comicsPerPage;
-    let comics = this.state.comics;
     let currentComics;
+    let filtered = this.state.comics.filter(
+      (comic) => {
+        return comic.title.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+        }
+      );
 
     if (indexOfFirstComic < 0) {
-      currentComics = comics.slice(0, 30);
-    } else if (indexOfLastComic > comics.length) {
-      currentComics = comics.slice(indexOfFirstComic, indexOfLastComic);
+      currentComics = filtered.slice(0, 30);
+    } else if (indexOfLastComic > filtered.length) {
+      currentComics = filtered.slice(indexOfFirstComic, indexOfLastComic);
     } else {
       currentComics = this.state.comics.slice(indexOfFirstComic, indexOfLastComic);
     }
@@ -93,13 +104,22 @@ class ComicsList extends Component {
     )
   })
     return (
-      <div id="comics-menu">
-        {finalComics}
-        <div className="pagination">
-          {renderPageNumbers}
-        </div>
-        <div className="react-footer">
-          <a href="http://marvel.com" className="attribution">Data provided by Marvel. © 2014 Marvel</a>
+      <div>
+        <input
+           placeholder="Search"
+           type="text"
+           value={this.state.search}
+           onChange={this.updateSearch}
+           className="searchBar"
+          />
+        <div id="comics-menu">
+          {finalComics}
+          <div className="pagination">
+            {renderPageNumbers}
+          </div>
+          <div className="react-footer">
+            <a href="http://marvel.com" className="attribution">Data provided by Marvel. © 2014 Marvel</a>
+          </div>
         </div>
       </div>
     )
