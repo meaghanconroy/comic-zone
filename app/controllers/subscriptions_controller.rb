@@ -15,7 +15,6 @@ class SubscriptionsController < ApplicationController
     redirect_to user_path(current_user)
   end
   def destroy
-
     @comic = Comic.find(params[:comic_id])
     @user = current_user
     @subscription = Subscription.find(params[:id])

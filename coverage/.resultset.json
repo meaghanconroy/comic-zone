@@ -44,14 +44,6 @@
         null,
         0,
         null,
-        null,
-        1,
-        0,
-        null,
-        1,
-        0,
-        null,
-        null,
         null
       ],
       "/Users/meaghanconroy/comic-zone/app/helpers/application_helper.rb": [
@@ -93,33 +85,6 @@
         null
       ],
       "/Users/meaghanconroy/comic-zone/app/models/subscription.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/meaghanconroy/comic-zone/app/mailers/user_mailer.rb": [
-        1,
-        1,
-        1,
-        45,
-        45,
-        45,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/meaghanconroy/comic-zone/app/mailers/application_mailer.rb": [
         1,
         1,
         1,
@@ -225,7 +190,6 @@
         1,
         null,
         1,
-        null,
         1,
         1,
         1,
@@ -241,11 +205,8 @@
         6,
         null,
         null
-      ],
-      "/Users/meaghanconroy/comic-zone/app/mailers/reminder_mailer.rb": [
-
       ]
     },
-    "timestamp": 1499346525
+    "timestamp": 1499355685
   }
 }

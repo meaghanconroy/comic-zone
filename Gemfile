@@ -32,6 +32,7 @@ group :development, :test do
   gem 'valid_attribute'
   gem 'shoulda'
   gem 'shoulda-matchers', require: false
+  gem 'whenever-test'
 end
 
 group :development do
@@ -43,6 +44,7 @@ end
 
 group :test do
   gem 'coveralls', require: false
+  gem 'whenever-test'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
