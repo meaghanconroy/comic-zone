@@ -64,7 +64,7 @@ class ComicsList extends Component {
     let currentComics;
     let filtered = this.state.comics.filter(
       (comic) => {
-        return comic.title.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+        return comic.title.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 || comic.artist.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 || comic.writer.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
         }
       );
 
