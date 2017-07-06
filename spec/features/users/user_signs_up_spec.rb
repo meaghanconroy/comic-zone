@@ -2,6 +2,7 @@ require 'rails_helper'
 
 feature "User signs up" do
   scenario 'a new user signs up' do
+    ActionMailer::Base.deliveries.clear
     visit root_path
 
     click_link 'Sign Up'
@@ -18,5 +19,7 @@ feature "User signs up" do
     expect(page).to have_content('Welcome! You have signed up successfully.')
     expect(page).to have_content('Sign Out')
     expect(page).to have_css("img[src*='photo.jpg']")
+    expect(ActionMailer::Base.deliveries.count).to eq(1)
+
   end
 end

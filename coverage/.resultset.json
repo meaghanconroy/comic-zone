@@ -18,6 +18,15 @@
         1,
         null,
         1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
         1,
         45,
         null,
@@ -34,6 +43,14 @@
         1,
         null,
         0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        1,
+        0,
+        null,
         null,
         null
       ],
@@ -83,11 +100,19 @@
       ],
       "/Users/meaghanconroy/comic-zone/app/mailers/user_mailer.rb": [
         1,
-        null,
+        1,
         1,
         45,
         45,
         45,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
         null,
         null,
         null,
@@ -221,6 +246,6 @@
 
       ]
     },
-    "timestamp": 1499293247
+    "timestamp": 1499346525
   }
 }
