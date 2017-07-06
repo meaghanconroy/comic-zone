@@ -4,7 +4,7 @@
     <title>ComicZone</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Boogaloo|Dosis|Droid+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Droid+Sans" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true  %>
     <%= csrf_meta_tags %>
@@ -15,43 +15,32 @@
       <div class="top-bar">
         <div class="top-bar-left">
           <h1 class="menu-text">
-            <%= link_to "ComicZone", comics_path %>
+            <%= link_to "ComicZone!", comics_path %>
           </h1>
         </div>
         <div class="top-bar-right">
           <ul class="menu">
             <% if user_signed_in? %>
-              <% if current_user.admin? %>
-              <li>
-                <%= link_to "View Users", admin_users_path %>
-              </li>
-              <li>
-                <%= link_to "Update Comics", comics_path %>
-              </li>
-              <% end %>
               <% if current_user.avatar.present? %>
                 <li class="profile-picture">
                   <img src="<%=current_user.avatar%>" height=40 width=40>
                 </li>
               <% end %>
-              <li>
-                <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-              </li>
-              <li>
-                <%= link_to "View Profile", user_path(current_user) %>
-              </li>
-              <li>
-                <%= link_to "Edit Profile", edit_user_registration_path %>
-              </li>
+              <li><%= link_to "View Profile", user_path(current_user) %></li>
+              <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
             <% else %>
-              <li>
-                <%= link_to "Sign Up", new_user_registration_path %>
-              </li>
-              <li>
-                <%= link_to "Sign In", new_user_session_path %>
-              </li>
+              <li><%= link_to "Sign Up", new_user_registration_path %></li>
+              <li><%= link_to "Sign In", new_user_session_path %></li>
             <% end %>
           </ul>
+          <% if current_user.try(:admin?) %>
+            <ul class="menu">
+              <li><%= link_to "View Users", admin_users_path %></li>
+              <li><%= link_to "Update Comics", comics_path %></li>
+              <li><%= link_to "Add Comic", new_admin_comic_path %></li>
+            </ul>
+          <% end %>
         </div>
       </div>
     </nav>

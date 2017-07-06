@@ -1,10 +1,12 @@
-<h2 class="page-title"><%= @title %></h2>
+<h2 class="page-title large-12 small-12 columns"><%= @title %></h2>
 </ br>
-<% @comics.each do |comic| %>
-<div class="comic-link">
-  <h5><%= link_to "#{comic.title}", comic_path(comic)%> </h5> </ br>
+<div class="large-12 small-12 columns">
+  <% @comics.each do |comic| %>
+    <div class="comic-link">
+      <h5><%= link_to "#{comic.title}", comic_path(comic)%> </h5> </ br>
+    </div>
+  <% end %>
 </div>
-<% end %>
-<div class="footer">
+<div class="react-footer">
   <a href="http://marvel.com" class="attribution">Data provided by Marvel. © 2014 Marvel</a>
 </div>

@@ -53,12 +53,12 @@ body {
   }
   .menu {
     background-color: $black;
-    padding-top: 40px;
+    padding: 0;
     a {
       color: $dust-green;
       font-weight: bold;
       font-family: 'Droid Sans', sans-serif;
-      margin: 2px;
+      margin: 1px;
     }
     .profile-picture {
       border-radius: 50px;
@@ -67,8 +67,13 @@ body {
     }
   }
 }
-
+.admin-add {
+  text-align: right;
+}
 .comic-link {
+  border-bottom: 10px solid $black;
+  margin: 20px;
+  padding-bottom: 10px;
   h5 {
     color: $link-purple;
     font-family: 'Droid Sans', sans-serif;
@@ -80,6 +85,25 @@ body {
   }
 }
 
+.searchBar {
+  width: 30%;
+  margin: 10px;
+  @media only screen and (max-width: 60em) {
+    width: 100%
+  }
+}
+#divider {
+  border: 5px solid $black;
+}
+.crop {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  img {
+    height: auto;
+    width: auto;
+  }
+}
 .comics-show {
   text-align: center;
 }
@@ -115,7 +139,7 @@ body {
 }
 
 #comics-menu {
-  text-align: left;
+  text-align: center relative;
 }
 
 .footer {
@@ -142,6 +166,36 @@ body {
   text-align: right;
 }
 
+.delete-account {
+  text-align: left;
+  font-size: 10pt;
+}
+
+.delete-button {
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.form-button {
+  background-color: $dust-green;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.field {
+  i {
+    font-size: 10pt;
+  }
+  em {
+    font-size: 10pt;
+  }
+  label {
+    font-size: 12pt;
+  }
+}
 .pagination {
   clear: both;
   position: relative;
@@ -159,4 +213,12 @@ body {
 
 .profile-page {
   text-align: center;
+}
+
+#user-index {
+  div {
+    border: 2px solid $link-purple;
+    padding: 5px;
+    text-align: center;
+  }
 }

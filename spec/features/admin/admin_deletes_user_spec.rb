@@ -23,7 +23,7 @@ feature "Admin views a list of users" do
     sign_in_as(admin)
     click_link 'View Users'
     visit admin_users_path
-    within("li##{user.id}") do
+    within("div##{user.id}") do
       click_link "Delete User"
     end
     expect(page).to have_content("User account deleted")
