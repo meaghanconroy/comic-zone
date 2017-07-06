@@ -12,7 +12,7 @@ class SubscriptionsController < ApplicationController
     # binding.pry
     @comic = Comic.find(params[:comic_id])
     @subscription = Subscription.create(user: current_user, comic: @comic)
-    redirect_to user_path(current_user)
+    redirect_to user_subscriptions_path(current_user)
   end
   def destroy
     @comic = Comic.find(params[:comic_id])
