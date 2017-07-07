@@ -97,7 +97,6 @@ body {
 }
 #subscription-divider {
   border: 5px solid $black;
-  width: 100%;
 }
 .crop {
   height: 200px;
@@ -220,12 +219,26 @@ body {
 }
 
 #user-index {
-  div {
+  .user-block {
     border: 2px solid $link-purple;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
+    .user-info {
+      text-align: left;
+    }
+    .sub-list {
+      text-align: left;
+    }
   }
 }
+// #user-index{
+//   .user-info {
+//     text-align: center;
+//     .user-photo {
+//       text-align: center;
+//     }
+//   }
+// }
 
 #splash-greeting {
   text-align: center;

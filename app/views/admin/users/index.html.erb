@@ -1,16 +1,30 @@
-<h3> All Users </h3>
+<h3 class="page-title row"> All Users </h3>
 <div class="row" id="user-index">
 <% @users.each do |user| %>
-  <div class="large-3 small-12 columns" id= <%= user.id %> >
-    <img src="<%=user.avatar%>" height=60 width=60>
-  </br>
-    Name: <%= user.first_name %> <%= user.last_name %>
-  </br>
-    Username: <%= user.username %>
-  </br>
-    Email: <%= user.email %>
-  </br>
-    <%= link_to "Delete User", admin_user_path(user), method: :delete %>
+  <div class="large-6 small-12 columns user-block" id="<%= user.id %>">
+    <img src="<%=user.avatar%>" class="user-photo row" height="80" width="100">
+    <div class="row">
+      <div class="large-6 small-12 columns user-info">
+        </br>
+        Name: <%= user.first_name %> <%= user.last_name %>
+        </br>
+        Username: <%= user.username %>
+        </br>
+        Email: <%= user.email %>
+        </br>
+      </div>
+      <div class="large-6 small-12 columns">
+      </br>
+        <ul class="sub-list"> Subscriptions:
+          <% user.comics.each do |comic|%>
+            <li><%= comic.title %></li>
+            <% end %>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <%= link_to "Delete User", admin_user_path(user), method: :delete %>
+    </div>
   </div>
 <% end %>
 </div>

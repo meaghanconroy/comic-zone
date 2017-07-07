@@ -113,7 +113,7 @@ class ComicsList extends Component {
            className="searchBar"
           />
         <div id="divider" className="row"></div>
-        <div id="comics-menu" className="row">
+        <div id="comics-menu">
           {finalComics}
           <div className="pagination">
             {renderPageNumbers}

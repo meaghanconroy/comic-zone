@@ -1,6 +1,6 @@
 <div><h2 class="page-title row"><%= @title %></h2></div>
+<div id="subscription-divider" class="row"></div>
 <div id="subscription-menu" class="row">
-  <div id="subscription-divider" class="row"></div>
   <% @comics.each do |comic| %>
     <div class="comic-link row" id="<%= comic.id %>">
       <div class="large-3 small-12 columns">
