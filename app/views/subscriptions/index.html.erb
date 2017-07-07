@@ -1,10 +1,19 @@
-<h2 class="page-title"><%= @title %></h2>
-</ br>
-<% @comics.each do |comic| %>
-<div class="comic-link">
-  <h5><%= link_to "#{comic.title}", comic_path(comic)%> </h5> </ br>
+<div><h2 class="page-title row"><%= @title %></h2></div>
+<div id="subscription-divider" class="row"></div>
+<div id="subscription-menu" class="row">
+  <% @comics.each do |comic| %>
+    <div class="comic-link row" id="<%= comic.id %>">
+      <div class="large-3 small-12 columns">
+        <img src="<%= comic.photo %>" class="crop"/>
+      </div>
+      <div class="large-9 small-12 columns">
+        <h5><%= link_to "#{comic.title}", comic_path(comic)%> </h5>
+        <h5 class="comic-publisher"><%= comic.publisher %></h5>
+      </div>
+      </ br>
+    </div>
+  <% end %>
 </div>
-<% end %>
-<div class="footer">
+<div class="react-footer">
   <a href="http://marvel.com" class="attribution">Data provided by Marvel. © 2014 Marvel</a>
 </div>

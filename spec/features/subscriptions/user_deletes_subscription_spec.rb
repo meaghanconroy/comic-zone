@@ -22,7 +22,23 @@ feature "User deletes subscription" do
   let!(:third_user_subscription) do
     FactoryGirl.create(:subscription, user: user, comic: third_comic)
   end
+  let!(:cap_marvel) do
+    FactoryGirl.create(:comic, title: "Captain Marvel (2016 - Present)")
+  end
+  let!(:ironman) do
+    FactoryGirl.create(:comic, title: "Iron Man Annual (1970 - 1994)")
+  end
+  let!(:black_panther) do
+    FactoryGirl.create(:comic, title: "Black Panther (2016 - Present)")
+  end
+  let!(:black_widow) do
+    FactoryGirl.create(:comic, title: "Black Widow (2010)")
+  end
   scenario "A user can delete their own subscription" do
+    @cap_marvel = cap_marvel
+    @ironman = ironman
+    @black_panther = black_panther
+    @black_widow = black_widow
     visit root_path
     sign_in_as(user)
     visit comic_path(third_comic)

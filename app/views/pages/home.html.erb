@@ -1,4 +1,13 @@
-<div><h1>Welcome to ComicZone!</h1></div>
-<div class="footer">
+<h1 id="splash-greeting" class="large-12 small-12 columns">Welcome to ComicZone!</h1>
+<div class="row" id="splash-page">
+  <%= link_to image_tag("capmarvel.jpg", alt: "Captain Marvel (2016-Present)", class: "large-3 small-12 columns splash-image"), comic_path(@cap_marvel.id) %>
+
+  <%= link_to image_tag("ironman.jpg", alt: "Iron Man Annual (1970 - 1994)", class:"large-3 small-12 columns splash-image"), comic_path(@ironman.id)%>
+
+  <%= link_to image_tag("blackpanther.jpg", alt: "Black Panther (2016 - Present)", class:"large-3 small-12 columns splash-image"), comic_path(@black_panther.id)%>
+
+  <%= link_to image_tag("blackwidow.jpg", alt: "Black Widow (2010)", class:"large-3 small-12 columns splash-image"), comic_path(@black_widow.id)%>
+</div>
+<div class="react-footer">
   <a href="http://marvel.com" class="attribution">Data provided by Marvel. © 2014 Marvel</a>
 </div>
