@@ -1,7 +1,7 @@
 <h3 class="page-title row"> All Users </h3>
 <div class="row" id="user-index">
 <% @users.each do |user| %>
-  <div class="large-6 small-12 columns user-block" id="<%= user.id %>">
+  <div class="row user-block" id="<%= user.id %>">
     <img src="<%=user.avatar%>" class="user-photo row" height="80" width="100">
     <div class="row">
       <div class="large-6 small-12 columns user-info">
@@ -12,6 +12,8 @@
         </br>
         Email: <%= user.email %>
         </br>
+      </div>
+      <div class="large-6 small-12 columns">
       </br>
         <ul class="sub-list"> Subscriptions:
           <% user.comics.each do |comic|%>
@@ -24,5 +26,6 @@
       <%= link_to "Delete User", admin_user_path(user), method: :delete %>
     </div>
   </div>
+  <div class="user-divider"></div>
 <% end %>
 </div>

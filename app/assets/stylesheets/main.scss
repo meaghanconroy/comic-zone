@@ -98,6 +98,10 @@ body {
 #subscription-divider {
   border: 5px solid $black;
 }
+
+.user-divider {
+  border: 2px solid $black;
+}
 .crop {
   height: 200px;
   width: 200px;
@@ -220,8 +224,8 @@ body {
 
 #user-index {
   .user-block {
-    border: 2px solid $link-purple;
     padding: 10px;
+    margin: 10px;
     text-align: center;
     .user-info {
       text-align: left;
@@ -231,14 +235,6 @@ body {
     }
   }
 }
-// #user-index{
-//   .user-info {
-//     text-align: center;
-//     .user-photo {
-//       text-align: center;
-//     }
-//   }
-// }
 
 #splash-greeting {
   text-align: center;
