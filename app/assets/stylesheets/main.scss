@@ -95,6 +95,10 @@ body {
 #divider {
   border: 5px solid $black;
 }
+#subscription-divider {
+  border: 5px solid $black;
+  width: 100%;
+}
 .crop {
   height: 200px;
   width: 200px;
@@ -221,4 +225,16 @@ body {
     padding: 5px;
     text-align: center;
   }
+}
+
+#splash-greeting {
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+  font-size: 60pt;
+}
+#splash-page {
+  text-align: center;
+}
+.splash-image {
+  border-radius: 30px;
 }
