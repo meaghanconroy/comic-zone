@@ -12,11 +12,11 @@ Heroku link: https://comiczone.herokuapp.com/
 
 Technologies incorporated:
 
-Ruby version 2.3.3 (Rails 5.1.1)
-React.js
-Foundation & SASS for styling
-Devise (user authentication)
-PostgreSQL
-Marvel API
-RSpec/Capybara for testing suite
-Karma/Enzyme for testing React.
+* Ruby version 2.3.3 (Rails 5.1.1)
+* React.js
+* Foundation & SASS for styling
+* Devise (user authentication)
+* PostgreSQL
+* Marvel API
+* RSpec/Capybara for testing suite
+* Karma/Enzyme for testing React.
