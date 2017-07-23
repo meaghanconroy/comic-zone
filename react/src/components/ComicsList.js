@@ -11,8 +11,6 @@ class ComicsList extends Component {
       search: ''
     };
     this.getData = this.getData.bind(this);
-    this.previousPage = this.previousPage.bind(this);
-    this.nextPage = this.nextPage.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.updateSearch = this.updateSearch.bind(this);
   }
@@ -75,6 +73,7 @@ class ComicsList extends Component {
     } else {
       currentComics = this.state.comics.slice(indexOfFirstComic, indexOfLastComic);
     }
+
     let finalComics = currentComics.map((comic, index) => {
       return (
         <Comic
@@ -86,6 +85,7 @@ class ComicsList extends Component {
         />
       )
     });
+
     let pageNumbers = [];
 
     for(let i = 1; i <= Math.ceil(this.state.comics.length / this.state.comicsPerPage); i++) {
